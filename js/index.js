@@ -210,7 +210,7 @@ const enterFullview = () => {
   }, 0)
   // Scale up the inner image
   .to(middleRowItemInnerImage, {
-    scale: 1.2,
+    scale: 1.0,
     duration: 3,
     ease: 'sine'
   }, '<-=0.45')
