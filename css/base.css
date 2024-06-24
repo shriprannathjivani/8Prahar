@@ -5,14 +5,14 @@
 }
 
 :root {
-	font-size: 12px;
+	font-size: .8rem;
 	--color-text: #292828;
 	--color-bg: #ddd;
 	--color-link: #000;
 	--color-link-hover: #000;
 	--page-padding: 1rem;
 	--angle: -15deg;
-	--trans-content: -30vh;
+	--trans-content: -90vh;
 }
 
 body {
@@ -306,7 +306,7 @@ a:focus-visible {
 	top: 0;
 	left: 0;
 	z-index: 0;
-	background: url(../img/noise.png), radial-gradient(at top, #f9a132 0%, #ddd 100%);
+	background: url(../img/noise.png), radial-gradient(at top, #ED9E20 0%, #FFDB81 100%);
   background-size: 250px, 100%;
 }
 
@@ -319,13 +319,15 @@ a:focus-visible {
 	flex-wrap: wrap;
 	gap: 1rem;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .content__header h2 {
-	font-size: 2rem;
-	font-weight: 400;
+	font-size: 1rem;
+	font-weight: 800;
 	margin: 6rem 0 10vh;
-	line-height: 0.9;
+	line-height: normal;
+	color: #B30902;
 }
 
 .content__text {
@@ -367,7 +369,7 @@ a:focus-visible {
 		align-content: space-between;
 	}
 	.content__header h2 {
-		font-size: clamp(2rem,20vh,16rem);
+		font-size: clamp(1.5rem,20vh,16rem);
 	}
 	.content__text p.highlight {
 		font-size: clamp(2rem,7vh,4rem);
