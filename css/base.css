@@ -329,7 +329,22 @@ a:focus-visible {
 	line-height: normal;
 	color: #B30902;
 }
+.main-contain{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    font-size: 1.8rem;
+    padding: 7rem 0;
+    margin: 3rem 0;
+}
+.main-contain .content-text h2{
+	color: #B30902;
+}
 
+.main-contain .content-text p{
+	color: #2f1e01;
+}
 .content__text {
 	text-wrap: balance;
 	display: flex;
@@ -359,6 +374,29 @@ a:focus-visible {
 	transform: translateY(calc(-1 * var(--trans-content)));
 }
 
+.btn-primary {
+	color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    padding: 1.75rem 4rem;
+    font-weight: 700;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: url(../img/noise.png), radial-gradient(circle, #f9a13275 0%, transparent 100%);
+    background-size: 250px, 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    border-radius: 61rem;
+    width: 280px;
+    border: 1px solid black;
+}
+.btn-primary:hover {
+	background-color: rgba(0,0,0,0.2);
+	text-decoration: none;
+}
+
 @media screen and (min-width: 53em) {
 	body {
 		--page-padding: 2rem 3rem;
@@ -373,5 +411,33 @@ a:focus-visible {
 	}
 	.content__text p.highlight {
 		font-size: clamp(2rem,7vh,4rem);
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+	.main-contain{
+		flex-direction: column;
+        padding: 2rem;
+        margin: 0;
+		gap: 1rem;
+		font-size: 1.5rem;
+	}
+	.content__nav{
+		flex-direction: column;
+	}
+	.content-text {
+		text-align: center;
+	}
+	.content-text .namaste {
+		margin: 0px auto;
+		display: block;
+		width: 140px;
+	}
+	.book_img{
+		width: 100%;
+	}
+	.content__footer{
+		margin-top: 1rem;
 	}
 }
