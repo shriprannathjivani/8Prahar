@@ -12,7 +12,7 @@
 	--color-link-hover: #000;
 	--page-padding: 1rem;
 	--angle: -15deg;
-	--trans-content: -90vh;
+	--trans-content: -100vh;
 }
 
 body {
@@ -190,7 +190,7 @@ a:focus-visible {
 }
 
 .intro--open {
-	height: 80vh;
+	height: 50vh;
 }
 
 .grid {
@@ -335,8 +335,9 @@ a:focus-visible {
     align-items: center;
     gap: 160px;
     font-size: 1.8rem;
-    padding: 7rem 0;
-    margin: 3rem 0;
+    padding: 4rem 0;
+    margin: 0rem 0;
+    text-align: center;
 }
 .main-contain .content-text h2{
 	color: #B30902;
@@ -375,26 +376,55 @@ a:focus-visible {
 }
 
 .btn-primary {
-	color: rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-    padding: 1.75rem 4rem;
-    font-weight: 700;
-    z-index: 100;
-    font-weight: 700;
-    font-size: 1.5rem;
-    background: url(../img/noise.png), radial-gradient(circle, #f9a13275 0%, transparent 100%);
-    background-size: 250px, 100%;
-    transition: all 0.3s;
-    cursor: pointer;
-    display: block;
-    text-align: center;
-    border-radius: 61rem;
-    width: 280px;
-    border: 1px solid black;
+	color: #B30902;
+	text-transform: uppercase;
+	padding: 1.2rem 4rem;
+	z-index: 100;
+	font-weight: 400;
+	font-size: 1.5rem;
+	background: url(../img/noise.png), radial-gradient(circle, #f9a13275 0%, transparent 100%);
+	background-size: 250px, 100%;
+	transition: all 0.3s;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 61rem;
+	border: 1px solid #B30902;
+	display: inline-block;
 }
 .btn-primary:hover {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgb(204 18 18 / 57%);
 	text-decoration: none;
+	color: white;
+}
+.btn-primary.me-md-4{
+	margin-top: 2rem;
+}
+.book_page_img{
+	width: 100%;
+}
+.services{
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+	gap: 8rem;
+	margin-bottom: 2rem;
+}
+.services .s_item{
+
+}
+.services .s_item img{
+	width: 150px;
+}
+.services .s_item h4{
+	color: #B30902;
+    font-weight: 500;
+    font-size: 2rem;
+	margin-bottom: 0;
+}
+.services .s_item p{
+	font-size: 20px;
+    margin-top: 8px;
+    color: #4c3406;
 }
 
 @media screen and (min-width: 53em) {
@@ -414,6 +444,164 @@ a:focus-visible {
 	}
 }
 
+/* Book */
+.book {
+    position: relative;
+	width: 440px;
+    height: 617px;
+    transition: transform 0.5s;
+	margin: 0px auto;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+	box-shadow: 0 10px 20px 4px rgb(21 21 32 / 8%);
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid #ba1a04;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+.book-animated {
+    margin-top: 5rem;
+}
+.bookButtons{
+	grid-column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+    display: flex;
+}
+#prev-btn, #next-btn{
+	display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #B30902;
+}
+img.bookButtons_icon {
+	background-color: #fff;
+    padding: .5rem;
+    border-radius: 40px;
+    height: 36px;
+}
+.heroIntro {
+	text-align: center;
+}
+.heroIntro h2{
+	font-size: 1.5rem;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    color: #f8f8f8;
+    margin-top: -15px;
+}
+.heroIntro p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 50%;
+    margin: 0px auto;
+}
+.maintitle{
+    margin-bottom: 4rem;
+    display: block;
+}
+.maintitle h3{
+	margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.maintitle h2{
+	color: #B30902;
+    margin: 0;
+    font-weight: 500;
+}
+
+.maintitle p{
+	margin: 0px;
+    font-size: 18px;
+}
 
 @media only screen and (max-width: 600px) {
 	.main-contain{
