@@ -628,4 +628,42 @@ img.bookButtons_icon {
 	.content__footer{
 		margin-top: 1rem;
 	}
+	.book{
+		width: 320px;
+    	height: 453px;
+	}
+	#prev-btn, #next-btn {
+		font-size: 1.3rem;
+		font-weight: 500;
+	}
+	.services {
+		gap: 2rem;
+		margin-bottom: 2rem;
+		flex-wrap: wrap;
+	}
+	.main-contain .content-text h2 {
+		font-size: 24px;
+	}
+	.maintitle p {
+		font-size: 14px;
+	}
+	.services .s_item img {
+		width: 75px;
+	}
+	.services .s_item h4 {
+		font-size: 18px;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	.services .s_item p {
+		font-size: 14px;
+		margin-top: 0px;
+	}
+	.bookButtons{
+		grid-column-gap:16px;
+	}
+	.heroIntro p{
+		width: 100%;
+		font-size: 18px;
+	}
 }
