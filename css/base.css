@@ -675,4 +675,11 @@ img.bookButtons_icon {
 		width: 100%;
 		font-size: 18px;
 	}
+	.into_img {
+		width: auto;
+		margin-bottom: 1rem;
+	}
+	.heroIntro h2{
+		font-size: 1.5rem;
+	}
 }
