@@ -276,6 +276,7 @@ const paper3 = document.querySelector("#p3");
 prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
 
+
 // Business Logic
 let currentLocation = 1;
 let numOfPapers = 3;

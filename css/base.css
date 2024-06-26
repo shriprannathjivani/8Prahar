@@ -398,6 +398,7 @@ a:focus-visible {
 }
 .btn-primary.me-md-4{
 	margin-top: 2rem;
+	margin-right: 8px;
 }
 .book_page_img{
 	width: 100%;
@@ -611,6 +612,10 @@ img.bookButtons_icon {
 	width: 25%;
 	margin-bottom: 1rem;
 }
+#prev-btn:disabled, #next-btn:disabled{
+	color: #f7f7f7;
+    opacity: 0.6;
+}
 
 @media only screen and (max-width: 600px) {
 	.main-contain{
@@ -672,7 +677,7 @@ img.bookButtons_icon {
 		grid-column-gap:16px;
 	}
 	.heroIntro p{
-		width: 100%;
+		width: 90%;
 		font-size: 18px;
 	}
 	.into_img {
